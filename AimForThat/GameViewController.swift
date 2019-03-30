@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import QuartzCore
+import SpriteKit
 
 class GameViewController: UIViewController {
 
@@ -14,15 +16,20 @@ class GameViewController: UIViewController {
     @IBOutlet weak var targetNumberLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var roundLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var particleView: UIView!
     
     var targetValue = 0
-    var score = 0
-    var round = 0
+    var score       = 0
+    var round       = 0
+    var time        = 0
+    var timer : Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupSlider()
+        time = 60
         
         startNewRound()
     }
@@ -45,11 +52,23 @@ class GameViewController: UIViewController {
     }
     
     func startNewRound() {
+        let transition = CATransition()
+        transition.type = .fade
+        transition.duration = 0.3
+        transition.timingFunction = CAMediaTimingFunction(name: .easeIn)
+        view.layer.add(transition, forKey: nil)
+        
+        if timer != nil {
+            timer?.invalidate()
+        }
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(tick), userInfo: nil, repeats: true)
+        
         randomNumber()
         slider.value = 50
         round += 1
         roundLabel.text = "\(round)"
         scoreLabel.text = "\(score)"
+        timeLabel.text  = "\(time)"
     }
     
     func randomNumber() {
@@ -66,8 +85,10 @@ class GameViewController: UIViewController {
         
         switch difference {
         case 0:
-            title = "BOOOOM! Perfect Score"
+            title = "BOOOOM! Perfect Score!"
             points = (10 * points)
+            particleEmiter()
+            tapticFeedback()
         case 1...5:
             title = "Almost!!"
             points = Int(Double(points) * 1.5)
@@ -79,10 +100,13 @@ class GameViewController: UIViewController {
         }
         self.score += points
         
-        let alert = UIAlertController(title: title, message: "\(points)", preferredStyle: .alert)
+        let alert = UIAlertController(title: title, message: "You scored \(points) points", preferredStyle: .alert)
         
         let action = UIAlertAction(title: "OK", style: .default, handler: {action in
             self.startNewRound()
+            if let viewWithTag = self.view.viewWithTag(100) {
+                viewWithTag.removeFromSuperview()
+            }
         })
         alert.addAction(action)
         
@@ -92,8 +116,55 @@ class GameViewController: UIViewController {
     @IBAction func resetGame(_ sender: UIButton) {
         score = 0
         round = 0
+        time  = 60
         startNewRound()
     }
     
+    @objc func tick() {
+        time -= 1
+        timeLabel.text = "\(time)"
+        if time <= 0 {
+            self.timer?.invalidate()
+            let alert = UIAlertController(title: "Game over!", message: "You scored \(score) points in \(round) rounds!", preferredStyle: .alert)
+            
+            let action = UIAlertAction(title: "OK", style: .default, handler: {action in
+                self.score = 0
+                self.round = 0
+                self.time  = 60
+                self.startNewRound()
+            })
+            alert.addAction(action)
+            present(alert, animated: true)
+        }
+    }
+    
+    func tapticFeedback() {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
+    }
+    
+    func particleEmiter() {
+        let sk: SKView = SKView()
+        sk.frame = particleView.bounds
+        sk.backgroundColor = .clear
+        particleView.addSubview(sk)
+        sk.tag = 100
+        
+        let scene: SKScene = SKScene(size: particleView.bounds.size)
+        scene.scaleMode = .aspectFit
+        scene.backgroundColor = .clear
+        
+        let rightParticle = SKEmitterNode(fileNamed: "MyParticle.sks")
+        rightParticle?.position = .init(x: UIScreen.main.bounds.width + 20, y: (UIScreen.main.bounds.height)/2)
+        
+        let leftParticle = SKEmitterNode(fileNamed: "MyParticle.sks")
+        leftParticle?.position = .init(x: -20, y: (UIScreen.main.bounds.height)/2)
+        leftParticle?.emissionAngle = 20
+        leftParticle?.emissionAngle = 0.34
+        
+        scene.addChild(rightParticle!)
+        scene.addChild(leftParticle!)
+        sk.presentScene(scene)
+    }
 }
 

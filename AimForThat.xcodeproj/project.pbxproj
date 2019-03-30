@@ -13,7 +13,7 @@
 		8BD336E3224FC25600AFBA94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD336E2224FC25600AFBA94 /* Assets.xcassets */; };
 		8BD336E6224FC25600AFBA94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD336E4224FC25600AFBA94 /* LaunchScreen.storyboard */; };
 		8BD336EE224FE01900AFBA94 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD336ED224FE01900AFBA94 /* InfoViewController.swift */; };
-		8BD336F0224FEAB100AFBA94 /* AimForThat.html in Resources */ = {isa = PBXBuildFile; fileRef = 8BD336EF224FEAB100AFBA94 /* AimForThat.html */; };
+		8BD336F22250130200AFBA94 /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8BD336F12250130200AFBA94 /* MyParticle.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		8BD336E5224FC25600AFBA94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BD336E7224FC25600AFBA94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BD336ED224FE01900AFBA94 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		8BD336EF224FEAB100AFBA94 /* AimForThat.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = AimForThat.html; sourceTree = "<group>"; };
+		8BD336F12250130200AFBA94 /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +60,10 @@
 			children = (
 				8BD336DB224FC25500AFBA94 /* AppDelegate.swift */,
 				8BD336DD224FC25500AFBA94 /* GameViewController.swift */,
+				8BD336F12250130200AFBA94 /* MyParticle.sks */,
 				8BD336ED224FE01900AFBA94 /* InfoViewController.swift */,
 				8BD336DF224FC25500AFBA94 /* Main.storyboard */,
 				8BD336E2224FC25600AFBA94 /* Assets.xcassets */,
-				8BD336EF224FEAB100AFBA94 /* AimForThat.html */,
 				8BD336E4224FC25600AFBA94 /* LaunchScreen.storyboard */,
 				8BD336E7224FC25600AFBA94 /* Info.plist */,
 			);
@@ -129,9 +129,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BD336E6224FC25600AFBA94 /* LaunchScreen.storyboard in Resources */,
-				8BD336F0224FEAB100AFBA94 /* AimForThat.html in Resources */,
 				8BD336E3224FC25600AFBA94 /* Assets.xcassets in Resources */,
 				8BD336E1224FC25500AFBA94 /* Main.storyboard in Resources */,
+				8BD336F22250130200AFBA94 /* MyParticle.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
