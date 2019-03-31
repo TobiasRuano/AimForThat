@@ -9,6 +9,7 @@ This is a simple game started from an udemy course which I continued to develop.
 * Taptic Feedback
 * Particle emitters with Spritekit
 * Use of timer
+* Portrait & Landscape
 
 ## Meta
 
