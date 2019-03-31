@@ -122,8 +122,8 @@ class GameViewController: UIViewController {
     
     @objc func tick() {
         time -= 1
-        timeLabel.text = "\(time)"
         if time <= 0 {
+            timeLabel.text = "0"
             self.timer?.invalidate()
             let alert = UIAlertController(title: "Game over!", message: "You scored \(score) points in \(round) rounds!", preferredStyle: .alert)
             
@@ -135,6 +135,8 @@ class GameViewController: UIViewController {
             })
             alert.addAction(action)
             present(alert, animated: true)
+        }else {
+            timeLabel.text = "\(time)"
         }
     }
     

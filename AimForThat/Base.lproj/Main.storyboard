@@ -210,18 +210,29 @@
                                     <action selector="backPressed" destination="Ek2-g8-cIq" eventType="touchUpInside" id="k4b-CS-gXS"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snq-Sz-p50">
+                                <rect key="frame" x="44" y="10" width="724" height="274"/>
+                                <color key="backgroundColor" red="0.49803921569999998" green="0.82745098039999998" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.49803921569999998" green="0.82745098039999998" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="zdI-vQ-WkN" firstAttribute="bottom" secondItem="nwz-9p-8xs" secondAttribute="bottom" id="6U2-hN-TVh"/>
+                            <constraint firstItem="nwz-9p-8xs" firstAttribute="trailing" secondItem="snq-Sz-p50" secondAttribute="trailing" id="CbK-fj-TWI"/>
                             <constraint firstItem="zdI-vQ-WkN" firstAttribute="centerX" secondItem="tTF-c0-EzR" secondAttribute="centerX" id="Jx4-sN-ezj"/>
+                            <constraint firstItem="snq-Sz-p50" firstAttribute="top" secondItem="nwz-9p-8xs" secondAttribute="top" constant="10" id="oL2-cQ-Wwu"/>
+                            <constraint firstItem="snq-Sz-p50" firstAttribute="leading" secondItem="nwz-9p-8xs" secondAttribute="leading" id="qrf-tw-Goh"/>
+                            <constraint firstItem="zdI-vQ-WkN" firstAttribute="top" secondItem="snq-Sz-p50" secondAttribute="bottom" constant="10" id="quw-2l-EXD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nwz-9p-8xs"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gcp-4f-5C3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="1108"/>
+            <point key="canvasLocation" x="136.69950738916256" y="1108"/>
         </scene>
     </scenes>
     <resources>
