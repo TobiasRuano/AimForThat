@@ -1,5 +1,5 @@
 # AimForThat
-> Simple game developed in the udemy course "Curso completo de iOS 11 y Swift: de cero a experto con JB" of "Juan Gabriel Gomila Salas"
+> Simple game developed in the udemy course ["Curso completo de iOS 11 y Swift: de cero a experto con JB"](https://www.udemy.com/ios11-swift4/) of "Juan Gabriel Gomila Salas"
 
 This is a simple game started from an udemy course which I continued to develop.
 
