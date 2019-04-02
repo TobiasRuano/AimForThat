@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B0DD78F2251246E00A6182A /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0DD78E2251246E00A6182A /* MainMenuViewController.swift */; };
+		8B73A43222514AD40037D073 /* DifficultyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73A43122514AD40037D073 /* DifficultyViewController.swift */; };
 		8BD336DC224FC25500AFBA94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD336DB224FC25500AFBA94 /* AppDelegate.swift */; };
 		8BD336DE224FC25500AFBA94 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD336DD224FC25500AFBA94 /* GameViewController.swift */; };
 		8BD336E1224FC25500AFBA94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD336DF224FC25500AFBA94 /* Main.storyboard */; };
 		8BD336E3224FC25600AFBA94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD336E2224FC25600AFBA94 /* Assets.xcassets */; };
 		8BD336E6224FC25600AFBA94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD336E4224FC25600AFBA94 /* LaunchScreen.storyboard */; };
 		8BD336EE224FE01900AFBA94 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD336ED224FE01900AFBA94 /* InfoViewController.swift */; };
-		8BD336F22250130200AFBA94 /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8BD336F12250130200AFBA94 /* MyParticle.sks */; };
+		8BD336F22250130200AFBA94 /* bulls-eye.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8BD336F12250130200AFBA94 /* bulls-eye.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B0DD78E2251246E00A6182A /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		8B73A43122514AD40037D073 /* DifficultyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyViewController.swift; sourceTree = "<group>"; };
 		8BD336D8224FC25500AFBA94 /* AimForThat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AimForThat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD336DB224FC25500AFBA94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BD336DD224FC25500AFBA94 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -25,7 +29,7 @@
 		8BD336E5224FC25600AFBA94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BD336E7224FC25600AFBA94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BD336ED224FE01900AFBA94 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		8BD336F12250130200AFBA94 /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
+		8BD336F12250130200AFBA94 /* bulls-eye.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "bulls-eye.sks"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +63,10 @@
 			isa = PBXGroup;
 			children = (
 				8BD336DB224FC25500AFBA94 /* AppDelegate.swift */,
+				8B0DD78E2251246E00A6182A /* MainMenuViewController.swift */,
+				8B73A43122514AD40037D073 /* DifficultyViewController.swift */,
 				8BD336DD224FC25500AFBA94 /* GameViewController.swift */,
-				8BD336F12250130200AFBA94 /* MyParticle.sks */,
+				8BD336F12250130200AFBA94 /* bulls-eye.sks */,
 				8BD336ED224FE01900AFBA94 /* InfoViewController.swift */,
 				8BD336DF224FC25500AFBA94 /* Main.storyboard */,
 				8BD336E2224FC25600AFBA94 /* Assets.xcassets */,
@@ -131,7 +137,7 @@
 				8BD336E6224FC25600AFBA94 /* LaunchScreen.storyboard in Resources */,
 				8BD336E3224FC25600AFBA94 /* Assets.xcassets in Resources */,
 				8BD336E1224FC25500AFBA94 /* Main.storyboard in Resources */,
-				8BD336F22250130200AFBA94 /* MyParticle.sks in Resources */,
+				8BD336F22250130200AFBA94 /* bulls-eye.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B0DD78F2251246E00A6182A /* MainMenuViewController.swift in Sources */,
+				8B73A43222514AD40037D073 /* DifficultyViewController.swift in Sources */,
 				8BD336DE224FC25500AFBA94 /* GameViewController.swift in Sources */,
 				8BD336EE224FE01900AFBA94 /* InfoViewController.swift in Sources */,
 				8BD336DC224FC25500AFBA94 /* AppDelegate.swift in Sources */,
@@ -293,7 +301,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7344G4M3BL;
 				INFOPLIST_FILE = AimForThat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +320,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7344G4M3BL;
 				INFOPLIST_FILE = AimForThat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
