@@ -18,6 +18,7 @@ class MainMenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        animateLogo()
     }
     
     func animateLogo() {
@@ -37,10 +38,6 @@ class MainMenuViewController: UIViewController {
             self.logoWidth.constant = 150
             self.view.layoutIfNeeded()
         }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        animateLogo()
     }
     
     override var prefersStatusBarHidden: Bool {

@@ -60,16 +60,7 @@ class GameViewController: UIViewController {
         }
     }
     
-    //TODO: Does not work
     func setBestScore () {
-        
-//        if let data = UserDefaults.standard.value(forKey: "bestscore") as? Data {
-//            bestScore = try! PropertyListDecoder().decode(SavedScore.self, from: data)
-//        } else {
-//            bestScore.easy = 0
-//            bestScore.medium = 0
-//            bestScore.hard = 0
-//        }
         
         if let savedScore = UserDefaults.standard.object(forKey: "bestScore") as? Data {
             let decoder = JSONDecoder()
@@ -204,10 +195,6 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func resetGame(_ sender: UIButton) {
-//        score = 0
-//        round = 0
-//        time  = 60
-//        startNewRound()
         self.dismiss(animated: true, completion: nil)
     }
     
