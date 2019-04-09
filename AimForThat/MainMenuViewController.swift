@@ -31,7 +31,7 @@ class MainMenuViewController: UIViewController {
             
             UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseIn, animations: { () -> Void in
                 self.logoImageView.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 2.0)
-            }, completion: nil)
+            })
             
             self.logoXConstraint.constant = -50
             self.logoHeight.constant = 150

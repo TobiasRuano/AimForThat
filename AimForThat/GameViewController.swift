@@ -116,6 +116,11 @@ class GameViewController: UIViewController {
         roundLabel.text = "\(round)"
         scoreLabel.text = "\(score)"
         timeLabel.text  = "\(time)"
+        
+        //remove particle emmiter
+        if let viewWithTag = self.view.viewWithTag(100) {
+            viewWithTag.removeFromSuperview()
+        }
     }
     
     func randomNumber() {
@@ -228,17 +233,21 @@ class GameViewController: UIViewController {
     }
     
     func saveBestScore(score: Int) {
+        //TODO: me estoy repitiendo
         if difficulty == 0 {
             if score > bestScore.easy {
                 bestScore.easy = score
+                highScoreParticleEmmiter()
             }
         } else if difficulty == 1 {
             if score > bestScore.medium {
                 bestScore.medium = score
+                highScoreParticleEmmiter()
             }
         } else if difficulty == 2 {
             if score > bestScore.hard {
                 bestScore.hard = score
+                highScoreParticleEmmiter()
             }
         }
         
@@ -275,6 +284,37 @@ class GameViewController: UIViewController {
         
         scene.addChild(rightParticle!)
         scene.addChild(leftParticle!)
+        sk.presentScene(scene)
+    }
+    
+    func highScoreParticleEmmiter() {
+        let sk: SKView = SKView()
+        sk.frame = particleView.bounds
+        sk.backgroundColor = .clear
+        particleView.addSubview(sk)
+        sk.tag = 100
+        
+        let scene: SKScene = SKScene(size: particleView.bounds.size)
+        scene.scaleMode = .aspectFit
+        scene.backgroundColor = .clear
+        
+        let color1 = SKEmitterNode(fileNamed: "Congratulations.sks")
+        color1?.position = .init(x: (UIScreen.main.bounds.width / 2), y: (UIScreen.main.bounds.height) + 40)
+        color1?.particlePositionRange = CGVector(dx: UIScreen.main.bounds.width, dy: 0)
+        
+        let color2 = SKEmitterNode(fileNamed: "Congratulations.sks")
+        color2?.position = .init(x: (UIScreen.main.bounds.width / 2), y: (UIScreen.main.bounds.height) + 40)
+        color2?.particleTexture = SKTexture(imageNamed: "color2")
+        color2?.particlePositionRange = CGVector(dx: UIScreen.main.bounds.width, dy: 0)
+        
+        let color3 = SKEmitterNode(fileNamed: "Congratulations.sks")
+        color3?.position = .init(x: (UIScreen.main.bounds.width / 2), y: (UIScreen.main.bounds.height) + 40)
+        color3?.particleTexture = SKTexture(imageNamed: "color3")
+        color3?.particlePositionRange = CGVector(dx: UIScreen.main.bounds.width, dy: 0)
+        
+        scene.addChild(color1!)
+        scene.addChild(color2!)
+        scene.addChild(color3!)
         sk.presentScene(scene)
     }
     

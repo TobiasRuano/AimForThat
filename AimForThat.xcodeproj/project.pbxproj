@@ -16,6 +16,7 @@
 		8BD336E6224FC25600AFBA94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD336E4224FC25600AFBA94 /* LaunchScreen.storyboard */; };
 		8BD336EE224FE01900AFBA94 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD336ED224FE01900AFBA94 /* InfoViewController.swift */; };
 		8BD336F22250130200AFBA94 /* bulls-eye.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8BD336F12250130200AFBA94 /* bulls-eye.sks */; };
+		8BE00758225D3ED100089AC9 /* Congratulations.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8BE00757225D3ED100089AC9 /* Congratulations.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		8BD336E7224FC25600AFBA94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BD336ED224FE01900AFBA94 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		8BD336F12250130200AFBA94 /* bulls-eye.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "bulls-eye.sks"; sourceTree = "<group>"; };
+		8BE00757225D3ED100089AC9 /* Congratulations.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Congratulations.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				8B73A43122514AD40037D073 /* DifficultyViewController.swift */,
 				8BD336DD224FC25500AFBA94 /* GameViewController.swift */,
 				8BD336F12250130200AFBA94 /* bulls-eye.sks */,
+				8BE00757225D3ED100089AC9 /* Congratulations.sks */,
 				8BD336ED224FE01900AFBA94 /* InfoViewController.swift */,
 				8BD336DF224FC25500AFBA94 /* Main.storyboard */,
 				8BD336E2224FC25600AFBA94 /* Assets.xcassets */,
@@ -136,6 +139,7 @@
 			files = (
 				8BD336E6224FC25600AFBA94 /* LaunchScreen.storyboard in Resources */,
 				8BD336E3224FC25600AFBA94 /* Assets.xcassets in Resources */,
+				8BE00758225D3ED100089AC9 /* Congratulations.sks in Resources */,
 				8BD336E1224FC25500AFBA94 /* Main.storyboard in Resources */,
 				8BD336F22250130200AFBA94 /* bulls-eye.sks in Resources */,
 			);
